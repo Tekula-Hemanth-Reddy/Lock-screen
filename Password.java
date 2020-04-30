@@ -35,13 +35,18 @@ public class Password implements WindowListener, ActionListener
 		
 	}
 	public void windowClosed(WindowEvent arg0) {
+	if(!tfield.getText().equalsIgnoreCase("password"))
+	{
 		JOptionPane.showMessageDialog(frame, "can't exit");
+	}
 		
 	}
 	@Override
 	public void windowClosing(WindowEvent we) {
-		JOptionPane.showMessageDialog(frame, "can't exit");	
-		
+	if(!tfield.getText().equalsIgnoreCase("password"))
+	{
+		JOptionPane.showMessageDialog(frame, "can't exit");
+	}
 	}
 	@Override
 	public void windowDeactivated(WindowEvent arg0) {
@@ -61,7 +66,7 @@ public class Password implements WindowListener, ActionListener
 	}
 	@Override
 	public void actionPerformed(ActionEvent ae) {
-		if(tfield.getText().equalsIgnoreCase("hemanth") ||tfield.getText().equalsIgnoreCase("chuchu") ||tfield.getText().equalsIgnoreCase("chomu"))
+		if(tfield.getText().equalsIgnoreCase("password"))
 		{
 			frame.dispose();
 		}
